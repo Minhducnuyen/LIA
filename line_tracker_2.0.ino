@@ -4,8 +4,9 @@ int bIN = 7 ;
 int PWMB = 6;
 int stby = 3;
 int x;
+// define the pin
 void forward(int x) {
-  // put your main code here, to run repeatedly:
+  // create a function for movment
 digitalWrite(8,1);
 analogWrite(5,x);
 digitalWrite(7,1);
@@ -72,10 +73,10 @@ void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
     // put your setup code here, to run once:
-pinMode(8,OUTPUT);
-pinMode(5,OUTPUT);
-pinMode(7,OUTPUT);
-pinMode(6,OUTPUT);
+pinMode(8,OUTPUT);//define the pin as an output
+pinMode(5,OUTPUT);//define the pin as an output
+pinMode(7,OUTPUT);//define the pin as an output
+pinMode(6,OUTPUT);//define the pin as an output
 digitalWrite(x,1);
 digitalWrite (stby,2);
 
@@ -83,14 +84,14 @@ digitalWrite (stby,2);
 
 // the loop routine runs over and over again forever:
 void loop() {
-  // read the input on analog pin 0:
+  // read the input on analog pin 0 ; 1 ; 2:
   int sensorValueR = analogRead(A0);
   int sensorValueM = analogRead(A1);
   int sensorValueL = analogRead(A2);
 
   // print out the value you read:
-  if (sensorValueM >= 40 && sensorValueM <= 400 ){
-    forward(100);
+  if (sensorValueM >= 40 && sensorValueM <= 400 ){ // read the value 
+    forward(100); // do this if the value is true
    Serial.print("forward ");
    Serial.println(sensorValueM);
    
