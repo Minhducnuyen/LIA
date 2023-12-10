@@ -1,4 +1,4 @@
-
+// difine the pin
 int AIN = 8;
 int PWMA = 5;
 int bIN = 7 ;
@@ -6,63 +6,63 @@ int PWMB = 6;
 int stby = 3;
 int x=100;
 void forward() {
-  // put your main code here, to run repeatedly:
+  // function for movement
 digitalWrite(8,1);
 analogWrite(5,x);
 digitalWrite(7,1);
 analogWrite(6,x);
 }
 void backward() {
-  // put your main code here, to run repeatedly:
+  // function for movement
 digitalWrite(8,0);
 analogWrite(5,x);
 digitalWrite(7,0);
 analogWrite(6,x);
 }
 void left() {
-  // put your main code here, to run repeatedly:
+  //function for movement
 digitalWrite(8,1);
 analogWrite(5,x);
 digitalWrite(7,0);
 analogWrite(6,x);
 }
 void right() {
-  // put your main code here, to run repeatedly:
+  //function for movement
 digitalWrite(8,0);
 analogWrite(5,x);
 digitalWrite(7,1);
 analogWrite(6,x);
 }
 void leftforward() {
-  // put your main code here, to run repeatedly:
+  //function for movement
 digitalWrite(8,1);
 analogWrite(5,x);
 digitalWrite(7,1);
 analogWrite(6,x/2);
 }
 void leftbackward() {
-  // put your main code here, to run repeatedly:
+  // function for movement
 digitalWrite(8,0);
 analogWrite(5,x);
 digitalWrite(7,0);
 analogWrite(6,x/2);
 }
 void rightforward() {
-  // put your main code here, to run repeatedly:
+  //function for movement
 digitalWrite(8,1);
 analogWrite(5,x/2);
 digitalWrite(7,1);
 analogWrite(6,x);
 }
 void rightbackward() {
-  // put your main code here, to run repeatedly:
+  //function for movement
 digitalWrite(8,0);
 analogWrite(5,x/2);
 digitalWrite(7,0);
 analogWrite(6,x);
 }
 void stop( ) {
-  // put your main code here, to run repeatedly:
+  //function for movement
 digitalWrite(8,1);
 analogWrite(5,0);
 digitalWrite(7,1);
@@ -79,6 +79,7 @@ int distance;
 long duration;
 int detectFront = 0, detectRight = 0, detectLeft = 0;
 void setup() {
+  //set up the pin to run
  pinMode(8,OUTPUT);
 pinMode(5,OUTPUT);
 pinMode(7,OUTPUT);
