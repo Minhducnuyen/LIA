@@ -10,7 +10,7 @@
 #define DOWN  21
 #define OK   64
 
-
+//define the pin
     int AIN = 8;
 int PWMA = 5;
 int bIN = 7 ;
@@ -18,63 +18,63 @@ int PWMB = 6;
 int stby = 3;
 int x;
 void forward(int x) {
-  // put your main code here, to run repeatedly:
+  // function for movement:
 digitalWrite(8,1);
 analogWrite(5,x);
 digitalWrite(7,1);
 analogWrite(6,x);
 }
 void backward(int x) {
-  // put your main code here, to run repeatedly:
+  // function for movement:
 digitalWrite(8,0);
 analogWrite(5,x);
 digitalWrite(7,0);
 analogWrite(6,x);
 }
 void left(int x) {
-  // put your main code here, to run repeatedly:
+  // function for movement::
 digitalWrite(8,1);
 analogWrite(5,x);
 digitalWrite(7,0);
 analogWrite(6,x);
 }
 void right(int x) {
-  // put your main code here, to run repeatedly:
+  // function for movement:
 digitalWrite(8,0);
 analogWrite(5,x);
 digitalWrite(7,1);
 analogWrite(6,x);
 }
 void leftforward(int x) {
-  // put your main code here, to run repeatedly:
+  //function for movement:
 digitalWrite(8,1);
 analogWrite(5,x);
 digitalWrite(7,1);
 analogWrite(6,x/2);
 }
 void leftbackward(int x) {
-  // put your main code here, to run repeatedly:
+  // function for movement:
 digitalWrite(8,0);
 analogWrite(5,x);
 digitalWrite(7,0);
 analogWrite(6,x/2);
 }
 void rightforward(int x) {
-  // put your main code here, to run repeatedly:
+  //function for movement:
 digitalWrite(8,1);
 analogWrite(5,x/2);
 digitalWrite(7,1);
 analogWrite(6,x);
 }
 void rightbackward(int x) {
-  // put your main code here, to run repeatedly:
+  // function for movement:
 digitalWrite(8,0);
 analogWrite(5,x/2);
 digitalWrite(7,0);
 analogWrite(6,x);
 }
 void stop(int x ) {
-  // put your main code here, to run repeatedly:
+  //function for movement::
 digitalWrite(8,1);
 analogWrite(5,0);
 digitalWrite(7,1);
